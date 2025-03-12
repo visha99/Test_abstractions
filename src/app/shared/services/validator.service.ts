@@ -1,14 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AbstractControl, FormControl, Validators } from '@angular/forms';
-// import { Globals } from 'src/app/core/enums/globals';
-// import * as moment from 'moment';
 @Injectable({
   providedIn: 'root',
 })
 export class ValidatorService extends Validators {
-
-
-
+  
   passwordValid(control: FormControl){
     const text = control.value as string;
     if (!/[a-zA-Z0-9ñÑ]/.test(text)) {
@@ -49,9 +45,6 @@ export class ValidatorService extends Validators {
     }
     return null;
   }
-
- 
-
 
   documentIdValid(control: FormControl) {
     const text = `${control.value}`;
