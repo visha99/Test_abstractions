@@ -1,0 +1,6 @@
+<div class="import-success-container">
+  <img *ngIf="data.icon" [src]="data.icon" alt="icon" />
+  <span class="modal-title">{{ data.title }}</span>
+  <span class="modal-body" [innerHTML]="data.message"></span>
+  <button class="modal-button" mat-flat-button mat-dialog-close >ACEPTAR</button>
+</div>

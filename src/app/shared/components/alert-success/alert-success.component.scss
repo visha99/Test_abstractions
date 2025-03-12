@@ -1,0 +1,22 @@
+.import-success-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+  align-items: center;
+  width: 50vw;
+}
+
+.modal-title {
+  color: #072b76;
+  font-size: 24px;
+  font-weight: 700;
+}
+.modal-body {
+  font-size: 18px;
+}
+
+.modal-button {
+  background-color: #ff6200;
+  color: white;
+}
