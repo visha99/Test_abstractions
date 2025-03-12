@@ -19,7 +19,6 @@ export abstract class RegistrationAbstraction {
 
   protected abstract addCustomFields(): void;
 
-
   private createForm() {
     return this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -30,7 +29,6 @@ export abstract class RegistrationAbstraction {
   }
 
   async confirmData() {
-    console.log(this.form.value);
     if (this.form.invalid) {
       return
     }

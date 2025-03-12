@@ -7,12 +7,10 @@ import { AppComponent } from './app.component';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
-import { ProjectARegisterComponent } from './pages/register/presentation/project-a-register/project-a-register/project-a-register.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProjectARegisterComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

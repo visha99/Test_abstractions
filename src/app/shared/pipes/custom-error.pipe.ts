@@ -6,16 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CustomErrorPipe implements PipeTransform {
   transform(errors: { [key: string]: boolean } | null | undefined, field?: string): string {
-    console.log(errors);
-    console.log(field);
     if (!errors) {
       return '';
     }
 
     const error = Object.keys(errors)[0];
-    console.log(error);
-    console.log(field);
-
     if (error === 'required') {
       return 'Campo requerido';
     } else if (error === 'nameInvalid' && field === 'name') {

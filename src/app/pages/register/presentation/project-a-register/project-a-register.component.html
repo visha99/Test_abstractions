@@ -1,0 +1,46 @@
+<div class="form-container__inside">
+    <form [formGroup]="form">
+      <h1 class="title">Registro para "Proyecto A"</h1>
+      <div class="inside__container">
+
+        <div class="input-form">
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="pat@example.com" formControlName="email" required>
+            <mat-error *ngIf="form.get('email')?.errors">
+              {{ form.get('email')!.errors | customError: 'email'}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="input-form">
+          <mat-form-field appearance="fill">
+            <mat-label>Nombre completo</mat-label>
+            <input matInput placeholder="Nombre completo" formControlName="name" required>
+            <mat-error *ngIf="form.get('name')?.errors">
+              {{ form.get('name')!.errors | customError: 'name'}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+
+        <div class="input-form">
+          <mat-form-field appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input matInput placeholder="Contraseña" formControlName="password" required>
+            <mat-error *ngIf="form.get('password')?.errors">
+              {{ form.get('password')!.errors | customError: 'password'}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="form-container__buttons">
+    <div>
+      <button mat-flat-button (click)="confirmData()" color="primary" [disabled]="form.invalid">
+        Guardar
+      </button>
+    </div>
+  </div>
