@@ -6,13 +6,13 @@ import { environment } from 'src/environments/environment';
 const routesProyectA: Routes = [
   {
     path: '', 
-    loadChildren: () => import('./project-a-register/project-a-register.module').then(m => m.ProjectARegisterModule)  
+    loadComponent: () => import('./project-a-register/project-a-register.component').then(m => m.ProjectARegisterComponent)  
   }
 ];
 const routesProyectB: Routes = [
   {
     path: '', 
-    loadChildren: () => import('./project-b-register/project-b-register.module').then(m => m.ProjectBRegisterModule)  
+    loadComponent: () => import('./project-b-register/project-b-register.component').then(m => m.ProjectBRegisterComponent)  
   }
 ];
 

@@ -13,10 +13,6 @@ const routes: Routes = [
   }
 ];
 
-// const routesProyectA: Routes = [];
-
-// const routesProyectB: Routes = [];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

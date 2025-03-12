@@ -1,11 +1,15 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RegistrationAbstraction } from '../../../abstrations/registration.abstraction';
-import { FormBuilder, ValidatorFn, Validators } from '@angular/forms';
+import { ValidatorFn, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { RegisterModule } from '../register.module';
 
 @Component({
-  selector: 'app-register',
+  selector: 'app-project-b-register',
   templateUrl: './project-b-register.component.html',
-  styleUrls: ['./project-b-register.component.scss']
+  styleUrls: ['./project-b-register.component.scss'],
+  standalone: true,
+  imports: [CommonModule, RegisterModule]
 })
 export class ProjectBRegisterComponent extends RegistrationAbstraction {
   constructor() {
